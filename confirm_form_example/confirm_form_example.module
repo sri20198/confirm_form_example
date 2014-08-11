@@ -7,14 +7,14 @@ function confirm_form_example_menu() {
 	
 	$items['example/list'] = array(
 		'title' => 'Test list',
-		'page callback' => 'example_list',
+		'page callback' => 'confirm_form_example_list',
 		'access callback' => TRUE,
 	);
 	
 	$items['example/%/delete'] = array(
 		'title' => 'Delete item',
 		'page callback' => 'drupal_get_form',
-		'page arguments' => array('example_delete', 1),
+		'page arguments' => array('confirm_form_example_delete', 1),
 		'access callback' => TRUE,
 		'type' => MENU_CALLBACK,
 	);
@@ -53,7 +53,7 @@ function confirm_form_example_delete($form, &$form_state, $the_id) {
 }
 
 /**
- * submit handler for the example_delete
+ * submit handler for the confirm_form_example_delete
  * this function is invoked only when the user clicks confirm button
  * clickin on cancel, the user goes back to the $path
  */
