@@ -1,0 +1,5 @@
+name = Confirm Form Example
+description = An example module for confirm_form
+core = 7.x
+
+package = custom
